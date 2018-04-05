@@ -5,7 +5,9 @@ const keys = require('./config/keys');
 require('./models/User');
 require('./services/passport');
 
-mongoose.connect(keys.mongoURI);
+mongoose.connect(
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/google_auth'
+);
 
 const app = express();
 
