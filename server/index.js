@@ -1,12 +1,16 @@
 const express = require('express');
-const passport = require('passport');
-const GoogleStrategy = require('passport-google-oauth20').Strategy;
+const mongoose = require('mongoose');
+const authRoutes = require('./routes/auth');
+const keys = require('./config/keys');
+require('./models/User');
+require('./services/passport');
+
+mongoose.connect(keys.mongoURI);
 
 const app = express();
+
+authRoutes(app);
+
 const PORT = process.env.PORT || 3000;
 
-// passport.use(new GoogleStrategy());
-
-app
-  .get('/', (req, res) => res.send({ hi: 'there' }))
-  .listen(PORT, () => console.log('listening on port ', PORT));
+app.listen(PORT);
