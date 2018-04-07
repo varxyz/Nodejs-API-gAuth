@@ -16,4 +16,19 @@ module.exports = app => {
     //the req appropriately -- turn the code into a profile
     passport.authenticate('google')
   );
+
+  app.get('/api/logout', (req, res) => {
+    /**logout is one of the methods attached by passport
+     * that allows us to manipulate the cookie handling
+     */
+    req.logout();
+    res.send(req.user);
+  });
+
+  app.get('/api/current_user', (req, res) => {
+    /**
+     * user is attached to express req object by passport
+     */
+    res.send(req.user);
+  });
 };
