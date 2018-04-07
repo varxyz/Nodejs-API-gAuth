@@ -31,7 +31,8 @@ passport.use(
       //callbackURL is the url google will use to send the query-string
       //code back to the server so we can make a follow-up request
       //to get the actual user profile
-      callbackURL: '/auth/google/callback'
+      callbackURL: '/auth/google/callback',
+      proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
       User.findOne({ googleID: profile.id }).then(existingUser => {
