@@ -1,5 +1,5 @@
 # Node API w/ Google OAUTH
-
+Demo -- https://node-starter-auth.herokuapp.com/
 This is a simple project starter for people who want to get started on their app right away without all the overheads of setting up a initial project boilerplate. You can save data with MongoDb or access some sample data directly from the app.
 You’ll need to make an app with google and get the `CLIENT_ID` and `CLIENT_SECRET` first. For development use you can add them in `./config/dev.js` or add them directly as environment variables. Either way, there is a check in place in `keys.js`. Also, you will need to set the authorized callback urls for your google app beforehand.
 
