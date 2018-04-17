@@ -1,5 +1,5 @@
 {
-  "name": "fs-node-react-sg",
+  "name": "node-api-starter-gauth",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "cookie-session": "^2.0.0-beta.3",
     "express": "^4.16.3",
